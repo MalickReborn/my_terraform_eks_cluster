@@ -1,6 +1,6 @@
-resource "aws_default_vpc" "vpc_default" {
+resource "aws_default_vpc" "vpc_central" {
 
   tags = {
-    Name = "vpc_default"
+    Name = "vpc_central"
   }
 }
