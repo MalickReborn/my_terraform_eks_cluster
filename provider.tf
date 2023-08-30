@@ -1,3 +1,9 @@
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+  profile = "devops"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -5,10 +11,4 @@ terraform {
       version = "~> 5.0"
     }
   }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-  profile = "devops"
 }
