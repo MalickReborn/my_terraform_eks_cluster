@@ -1,3 +1,6 @@
+# We provision 2 subnets, one public and one private for each availibility zone.
+# in our test we have 2 availibility zones
+# We also set some configuration into the tags that make the subnet available the eks cluster
 resource "aws_subnet" "public1" {
   vpc_id = aws_default_vpc.vpc_central.id
   availability_zone = "us-east-1a"

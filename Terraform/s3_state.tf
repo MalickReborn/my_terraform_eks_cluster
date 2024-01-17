@@ -43,7 +43,10 @@ resource "aws_s3_bucket_object_lock_configuration" "mytest_bucket_lock" {
   }
 }
 
-resource "aws_dynamodb_table" "terraform-lock" {
+/*
+Below, we ensure the backend supports state locking and consistency checking with a Dynamo DB table. 
+This will help avoid corrupting states following simultaneous deployments for example.
+*/resource "aws_dynamodb_table" "terraform-lock" {
     name           = "terraform_state"
     read_capacity  = 5
     write_capacity = 5
